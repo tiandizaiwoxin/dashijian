@@ -1,0 +1,10 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: 20px;
+}
+input{
+    width: 440px !important;
+}
