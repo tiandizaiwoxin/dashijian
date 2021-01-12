@@ -6,7 +6,7 @@ function show() {
             if (res.status !== 0) {
                 return layui.layer.msg(res.message)
             }
-            layui.layer.msg(res.message)
+            // layui.layer.msg(res.message)
             console.log(res.data);
             layui.form.val('form', res.data)
         }

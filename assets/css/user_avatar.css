@@ -1,0 +1,57 @@
+body,html{
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: 20px;
+}
+/* 设置卡片主体区域的宽度 */
+.layui-card-body {
+    width: 500px;
+  }
+  
+  /* 设置按钮行的样式 */
+  .row2 {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+.imgx{
+    width: 300px;
+    height: 300px;
+}
+#image{
+    display:block;
+    max-width: 100%;
+}
+.small{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.min{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.ss{
+    display: flex;
+}
+
+.row1{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.min{
+    margin-top: 50px;
+}
+
+#file{
+    display: none;
+}
+
