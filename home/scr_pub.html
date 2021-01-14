@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../assets/lib/cropper/cropper.css">
+    <link rel="stylesheet" href="../assets/css/scr_pub.css">
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">写文章</div>
+        <div class="layui-card-body">
+            <form class="layui-form">
+                <!-- 第一行 -->
+                <div class="layui-form-item">
+                    <label class="layui-form-label">文章标题</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required lay-verify="required" placeholder="请输入标题"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <!-- 第二行 -->
+                <div class="layui-form-item">
+                    <label class="layui-form-label">文章类别</label>
+                    <div class="layui-input-block">
+                        <select name="cate_id" lay-verify="required">
+
+                        </select>
+                    </div>
+                </div>
+                <!-- 第三行 -->
+                <div class="layui-form-item">
+                    <label class="layui-form-label">文章内容</label>
+                    <div class="layui-input-block">
+                        <textarea id="mytextarea" name="content"></textarea>
+                    </div>
+                </div>
+                <!-- 第四行 -->
+                <div class="layui-form-item">
+                    <label class="layui-form-label">上传封面</label>
+                    <div class="layui-input-block" id="img">
+                        <div class="big"><img id="image" src="../assets/images/sample.jpg"></div>
+                        <div class="sx">
+                            <div class="small">
+
+                            </div>
+                            <div class="">
+                                <input type="file" name="file" id="file"
+                                    accept="image/png,image/jpeg,image/gif,image/webp">
+                                <button type="button" class="layui-btn layui-btn-danger" id="ok">选择封面</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 第五行 -->
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button type="submit" class="layui-btn layui-btn-primary" id="now" lay-submit>存为草稿</button>
+                        <button type="submit" class="layui-btn" id="up" lay-submit>发布</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/html" id="select">
+        <option value="">请选择文章类别</option>
+        {{each data}}
+        <option value="{{$value.Id}}">{{$value.name}}</option>
+        {{/each}}
+    </script>
+    <script src="../assets/lib/layui/layui.all.js"></script>
+    <script src="../assets/lib/jquery.js"></script>
+    <script src="../assets/lib/template-web.js"></script>
+    <script src="../assets/lib/tinymce/tinymce.min.js"></script>
+    <script src="../assets/lib/tinymce/tinymce_setup.js"></script>
+    <script src="../assets/lib/cropper/Cropper.js"></script>
+    <script src="../assets/lib/cropper/jquery-cropper.js"></script>
+    <script src="../assets/js/baseApi.js"></script>
+    <script src="../assets/js/scr_pub.js"></script>
+</body>
+
+</html>
